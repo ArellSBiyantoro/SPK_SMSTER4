@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediksi STAN | Kelompok 4</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body class="align">
+
+    <section class="forms-section">
+        <h1 class="section-title">Prediksi STAN</h1>
+        <div class="forms">
+          <div class="form-wrapper is-active">
+            <button type="button" class="switcher switcher-saw">
+              Alternatif 1
+              <span class="underline"></span>
+            </button>
+            <form class="form form-saw">
+              <fieldset>
+                <legend>Cek probabilitas alter 1</legend>
+                <div class="input-block">
+                  <label for="saw-email">TKP</label>
+                  <input id="saw-email" type="number" required>
+                </div>
+                <div class="input-block">
+                    <label for="saw-email">TIU</label>
+                    <input id="saw-email" type="number" required>
+                </div>
+                <div class="input-block">
+                    <label for="saw-email">TWK</label>
+                    <input id="saw-email" type="number" required>
+                </div>
+              </fieldset>
+              <button type="submit" class="btn-saw">Coba hitung!</button>
+            </form>
+          </div>
+          <div class="form-wrapper">
+            <button type="button" class="switcher switcher-waspas">
+                Alternatif 2
+              <span class="underline"></span>
+            </button>
+            <form class="form form-waspas">
+              <fieldset>
+                <legend>Cek probabilitas alter 1</legend>
+                <div class="input-block">
+                  <label for="saw-email">TKP</label>
+                  <input id="saw-email" type="number" required>
+                </div>
+                <div class="input-block">
+                    <label for="saw-email">TIU</label>
+                    <input id="saw-email" type="number" required>
+                </div>
+                <div class="input-block">
+                    <label for="saw-email">TWK</label>
+                    <input id="saw-email" type="number" required>
+                </div>
+              </fieldset>
+              
+                <button type="button" class="btn-saw" onclick="redirectToURL()">Coba hitung!</button>
+
+                <script>
+                    function redirectToURL() {
+                        window.location.href = 'https://example.com';
+                    }
+                </script>
+                
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- pop up -->
+      <div id="myModal" class="modal fade">
+        <div class="modal-dialog modal-confirm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="icon-box">
+                        <i class="material-icons">&#xE876;</i>
+                    </div>				
+                    <h4 class="modal-title w-100">Awesome!</h4>	
+                </div>
+                <div class="modal-body">
+                    <p class="text-center">Your booking has been confirmed. Check your email for detials.</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-success btn-block" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+      <script src="index.js"></script>
+    
+</body>
+</html>
