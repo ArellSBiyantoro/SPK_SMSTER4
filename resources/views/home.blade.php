@@ -7,7 +7,12 @@
 <body class="align">
 
     <section class="forms-section">
-        <h1 class="section-title">Prediksi STAN</h1>
+        <div class="container">
+            <h1 class="section-title">Prediksi STAN</h1>
+            <div class="image-container">
+                <img src="image/stan.png" alt="STAN Prediction">
+            </div>
+        </div>
         <div class="forms">
             <div class="form-wrapper is-active">
                 <button type="button" class="switcher switcher-login">

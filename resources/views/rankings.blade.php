@@ -8,7 +8,7 @@
     <title>{{ $method }} Rankings</title>
     <style>
         body {
-            font-family: 'swap';
+            font-family: Roboto, -apple-system, 'Helvetica Neue', 'Segoe UI', Arial, sans-serif;
             background-color: #727da6;
             margin: 0;
             padding: 0;

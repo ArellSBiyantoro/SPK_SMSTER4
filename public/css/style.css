@@ -4,6 +4,25 @@
 	box-sizing: border-box;
 }
 
+.container {
+    display: flex;
+    align-items: center;
+}
+.section-title {
+    flex: 1;
+    font-size: 24px;
+    font-weight: bold;
+}
+.image-container {
+    margin-left: 0;
+    width: 105px;
+    padding-left: 20px;
+}
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
+
 body {
 	margin: 0;
 	font-family: Roboto, -apple-system, 'Helvetica Neue', 'Segoe UI', Arial, sans-serif;
@@ -15,6 +34,7 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+    margin-top: 40px;
 }
 
 .section-title {
