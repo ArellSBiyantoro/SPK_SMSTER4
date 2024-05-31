@@ -1,11 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ParticipantController;
+use App\Http\Controllers\PesertaController;
 
-// Route::get('/', function () {
-//     return view('create');
-// });
+Route::get('/', function () {
+    return view('home');
+});
 
-Route::get('/', [ParticipantController::class, 'index'])->name('participants.create');
-Route::post('/participants', [ParticipantController::class, 'store'])->name('participants.store');
+Route::post('/calculate', [PesertaController::class, 'calculate']);
