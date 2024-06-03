@@ -40,6 +40,13 @@ class PesertaController extends Controller
 
         // Ambil semua peserta
         $allPesertas = Peserta::all();
+        $allPesertas->each(function ($peserta, $index) {
+            $keterangan = ($index < 1251) ? 'Lulus Lanjut' : (($peserta->twk >= 65 && $peserta->tiu >= 80 && $peserta->tkp >= 156) ? 'Lulus' : 'Tidak Lulus');
+            $peserta->keterangan = $keterangan;
+            $peserta->save();
+        });
+
+        $allPesertas = Peserta::all();
 
         // Normalisasi nilai jika diperlukan oleh metode
         $maxTiw = $allPesertas->max('twk');
