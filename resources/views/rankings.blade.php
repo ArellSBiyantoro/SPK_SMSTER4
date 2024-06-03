@@ -82,6 +82,7 @@
                         <td>{{ $ranking['tiu'] }}</td>
                         <td>{{ $ranking['tkp'] }}</td>
                         <td>{{ $ranking['total'] }}</td>
+                        {{-- Periksa apakah key 'keterangan' tersedia sebelum mencetak --}}
                         <td>{{ $ranking['keterangan'] }}</td>
                     </tr>
                 @endforeach
