@@ -41,7 +41,7 @@ class PesertaController extends Controller
         // Ambil semua peserta
         $allPesertas = Peserta::all();
         $allPesertas->each(function ($peserta, $index) {
-            $keterangan = ($index < 1251) ? 'Lulus Lanjut' : (($peserta->twk >= 65 && $peserta->tiu >= 80 && $peserta->tkp >= 156) ? 'Lulus' : 'Tidak Lulus');
+            $keterangan = ($peserta->twk >= 65 && $peserta->tiu >= 80 && $peserta->tkp >= 156) ? 'Lulus' : 'Tidak Lulus';
             $peserta->keterangan = $keterangan;
             $peserta->save();
         });
@@ -112,6 +112,6 @@ class PesertaController extends Controller
         // Potong array peringkat untuk menampilkan hanya 5 peserta, 2 di atas dan 2 di bawah peserta yang baru dimasukkan
         $rankings = $rankings->slice($start, $end - $start);
 
-        return view('rankings', ['rankings' => $rankings, 'method' => $method, 'allPesertas'=>$allPesertas]);
+        return view('rankings', ['rankings' => $rankings, 'method' => $method, 'allPesertas'=>$allPesertas, 'name'=>$name]);
     }
 }

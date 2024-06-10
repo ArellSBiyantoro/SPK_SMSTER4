@@ -56,6 +56,13 @@
                 padding: 8px;
             }
         }
+        .note {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #f0f0f0;
+            color: #333;
+        }
     </style>
 </head>
 <body>
@@ -69,8 +76,7 @@
                     <th>TWK</th>
                     <th>TIU</th>
                     <th>TKP</th>
-                    <th>Total Nilai</th>
-                    <th>Keterangan</th>
+                    <th>Total Nilai</th>>
                 </tr>
             </thead>
             <tbody>
@@ -82,12 +88,25 @@
                         <td>{{ $ranking['tiu'] }}</td>
                         <td>{{ $ranking['tkp'] }}</td>
                         <td>{{ $ranking['total'] }}</td>
-                        {{-- Periksa apakah key 'keterangan' tersedia sebelum mencetak --}}
-                        <td>{{ $ranking['keterangan'] }}</td>
                     </tr>
                 @endforeach
             </tbody>
         </table>
+        
+        {{-- Catatan hanya untuk user yang diinput --}}
+        @foreach ($rankings as $index => $ranking)
+            @if ($ranking['nama'] === $name)
+                <div class="note">
+                    @if ($index + 1 < 1252)
+                        <p>Selamat, {{ $ranking['nama'] }}, kamu berpeluang Lulus dan Lanjut ke seleksi berikutnya.</p>
+                    @elseif ($index + 1 > 1251 && $ranking['keterangan'] !== 'Tidak Lulus')
+                        <p>Hai, {{ $ranking['nama'] }}, kamu memenuhi nilai minimal tes namun belum masuk ke dalam kuota penerimaan.</p>
+                    @else
+                        <p>Maaf, kamu belum memenuhi syarat nilai minimal Seleksi Kompetensi Dasar.</p>
+                    @endif
+                </div>
+            @endif
+        @endforeach
     </div>
 </body>
 </html>
